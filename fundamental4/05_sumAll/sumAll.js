@@ -6,13 +6,12 @@ const sumAll = function(begin, finish) {
         return "ERROR"
     } else {
         if (begin > finish) {
-            for (let i = begin ; i >= finish ; i--) {
+            let temp = begin;
+            begin = finish;
+            finish = temp;
+        }
+            for (let i = begin ; i <= finish ; i++) {
                 sum += i;
-            }
-        } else {
-            for (let i = finish ; i >= begin ; i--) {
-                sum += i;
-            }
         }
     }
     return sum;
